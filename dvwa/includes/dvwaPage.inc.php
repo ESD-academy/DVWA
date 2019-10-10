@@ -315,7 +315,7 @@ function dvwaHtmlEcho( $pPage ) {
 
 		</div>
 		<div id='footer'>
-		<p>ESDown by <a href='https://github.com/ethicalhack3r/DVWA'>DVWA</a></p>
+		<p><a href='https://github.com/ethicalhack3r/DVWA'>DVWA by ESD academy</a></p>
 		</div>
 	</body>
 
