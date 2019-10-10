@@ -6,9 +6,7 @@ This file contains all of the code to setup the initial MySQL database. (setup.p
 
 */
 
-if( !defined( 'DVWA_WEB_PAGE_TO_ROOT' ) ) {
-	define( 'DVWA_WEB_PAGE_TO_ROOT', '../../../' );
-}
+define( 'DVWA_WEB_PAGE_TO_ROOT', '../../../' );
 
 if( !@($GLOBALS["___mysqli_ston"] = mysqli_connect( $_DVWA[ 'db_server' ],  $_DVWA[ 'db_user' ],  $_DVWA[ 'db_password' ] )) ) {
 	dvwaMessagePush( "Could not connect to the MySQL service.<br />Please check the config file." );
@@ -53,10 +51,10 @@ $avatarUrl  = '/hackable/users/';
 
 $insert = "INSERT INTO users VALUES
 	('1','admin','admin','admin',MD5('password'),'{$avatarUrl}admin.jpg', NOW(), '0'),
-	('2','Gordon','Brown','gordonb',MD5('abc123'),'{$avatarUrl}gordonb.jpg', NOW(), '0'),
-	('3','Hack','Me','1337',MD5('charley'),'{$avatarUrl}1337.jpg', NOW(), '0'),
-	('4','Pablo','Picasso','pablo',MD5('letmein'),'{$avatarUrl}pablo.jpg', NOW(), '0'),
-	('5','Bob','Smith','smithy',MD5('password'),'{$avatarUrl}smithy.jpg', NOW(), '0');";
+	('2','Guy','Robert','grobert',MD5('cool'),'{$avatarUrl}gordonb.jpg', NOW(), '0'),
+	('3','Gerard','Dubois','gdubois',MD5('superman'),'{$avatarUrl}1337.jpg', NOW(), '0'),
+	('4','Jean-Michel','Schauer','jmschauer',MD5('notstrong'),'{$avatarUrl}pablo.jpg', NOW(), '0'),
+	('5','Liliane','De Graff','ldegraff',MD5('goodjob'),'{$avatarUrl}smithy.jpg', NOW(), '0');";
 if( !mysqli_query($GLOBALS["___mysqli_ston"],  $insert ) ) {
 	dvwaMessagePush( "Data could not be inserted into 'users' table<br />SQL: " . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) );
 	dvwaPageReload();

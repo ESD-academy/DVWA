@@ -6,7 +6,7 @@ require_once DVWA_WEB_PAGE_TO_ROOT . 'dvwa/includes/dvwaPage.inc.php';
 dvwaPageStartup( array( 'authenticated', 'phpids' ) );
 
 $page = dvwaPageNewGrab();
-$page[ 'title' ]   = 'Vulnerability: Weak Session IDs' . $page[ 'title_separator' ].$page[ 'title' ];
+$page[ 'title' ]   = 'ID de session prévisible' . $page[ 'title_separator' ].$page[ 'title' ];
 $page[ 'page_id' ] = 'weak_id';
 $page[ 'help_button' ]   = 'weak_id';
 $page[ 'source_button' ] = 'weak_id';
@@ -35,13 +35,15 @@ require_once DVWA_WEB_PAGE_TO_ROOT . "vulnerabilities/weak_id/source/{$vulnerabi
 
 $page[ 'body' ] .= <<<EOF
 <div class="body_padded">
-	<h1>Vulnerability: Weak Session IDs</h1>
-	<p>
-		This page will set a new cookie called dvwaSession each time the button is clicked.<br />
+	<div class=\"vulnerable_code_area\">
+	<h1>ID de session prévisible</h1>
+	<p align=center>
+		Cette page attribue un nouveau cookie appelé esdownSession à chaque fois que vous clickerez sur le bouton<br />
 	</p>
-	<form method="post">
-		<input type="submit" value="Generate" />
+	<form method="post" style='text-align:center'>
+		<input type="submit" value="Générer ID" />
 	</form>
+	</div>
 $html
 
 EOF;

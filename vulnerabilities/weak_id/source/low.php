@@ -8,6 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	}
 	$_SESSION['last_session_id']++;
 	$cookie_value = $_SESSION['last_session_id'];
-	setcookie("dvwaSession", $cookie_value);
+	setcookie("esdownSession", $cookie_value);
 }
 ?>

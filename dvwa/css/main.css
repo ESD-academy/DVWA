@@ -1,22 +1,32 @@
 body {
 	margin: 0;
 	color: #2f2f2f;
-	font: 12px/15px Arial, Helvetica, sans-serif;
+	font: 12px/15px 'Roboto', sans-serif;
 	min-width: 981px;
-	height: 100%;
 	position: relative;
 }
 
 body.home {
-	background: #e7e7e7;
+	background: #fff;
 }
 
 div.clear {
 	clear: both;
 }
+.zoom {
+  transition: transform 0.1s;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+.body_padded h1 {
+	text-align:center
+}
 
 a {
-	color: #99cc33;
+	color: #244087;
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -50,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+	color: #244087;
 	font-size: 200%;
 }
 
@@ -107,19 +118,18 @@ div.message {
 }
 
 div#container {
-	width: 900px;
-	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	background: #f4f4f4;
+	background: #ebedf7;
 	font-size: 13px;
+	border-bottom: #244087 5px solid;
 }
 
 div#header {
 	padding: 10px;
 	overflow: hidden;
-	background: #2f2f2f;
-	border-bottom: 5px solid #A1CC33;
+	background: #fff;
+	border-bottom: 5px solid #244087;
 	text-align: center;
 }
 
@@ -129,9 +139,9 @@ div#system_info {
 }
 
 div#main_body {
-	float: right;
-	width: 693px;
-	background: #f4f4f4;
+	margin: 25px auto;
+	width : 50%;
+	background: #ebedf7;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	font-size: 13px;
@@ -144,55 +154,48 @@ div.body_padded {
 
 div#main_menu {
 	float: left;
-	width: 200px;
+	width: 300px;
 	height: 100%;
-	background-color: #f4f4f4;
+	background-color: #ebedf7;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
 div#main_menu li {
 	border-width: 1px;
-	border-style: solid;
-	border-color: #D2D4D4 #6B778C #6B778C #D2D4D4;
-	padding: 3px 5px 3px 5px;
+	padding: 6px;
 	margin-bottom: 3px;
-	background-color: #bebebe;
+	background-color: #244087;
+	border-radius: 5px;
 }
 
 div#main_menu li a {
-	color: #000000;
+	color: #fff;
 	text-decoration: none;
 	text-decoration: none;
 }
 
 div#main_menu li.selected {
-	border-color: #758DAE #758DAE #758DAE #758DAE;
-	background-color: #99cc33;
+	background-color: #fff;
+	border: solid 1px #244087;
 }
 
 div#main_menu li.selected a {
-	color: #F9F7ED;
+	color: #244087;
 }
 
-div#main_menu li: hover {
-	border-color: #D2D4D4;
-}
-
-div#main_menu li: hover a {
-	color: #F9F7ED;
-}
 
 div#main_menu_padded {
 	padding: 15px;
 }
 
 div#footer {
-	color: #999999;
+	height: 100px;
+	color: #fff;
 	background: #2f2f2f;
 	padding: 10px;
 	text-align: center;
-	border-top: 5px solid #A1CC33;
+	border-top: 5px solid #244087;
 }
 
 input.popup_button {
@@ -206,20 +209,14 @@ input.popup_button {
 }
 
 div.vulnerable_code_area {
-	background-color: #f8fafa;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #000000;
+	background-color: #ebedf7;
+  text-align: center;
 	padding: 10px 20px 10px 20px;
 	margin-bottom: 20px;
 }
 
 div#guestbook_comments {
-	width: 45%;
 	background-color: #f8fafa;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #C0C0C0;
 	padding: 5px 10px 5px 10px;
 	margin-bottom: 5px;
 }

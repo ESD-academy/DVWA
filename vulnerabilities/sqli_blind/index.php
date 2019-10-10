@@ -6,7 +6,7 @@ require_once DVWA_WEB_PAGE_TO_ROOT . 'dvwa/includes/dvwaPage.inc.php';
 dvwaPageStartup( array( 'authenticated', 'phpids' ) );
 
 $page = dvwaPageNewGrab();
-$page[ 'title' ]   = 'Vulnerability: SQL Injection (Blind)' . $page[ 'title_separator' ].$page[ 'title' ];
+$page[ 'title' ]   = 'Injection SQL à l\'aveugle' . $page[ 'title_separator' ].$page[ 'title' ];
 $page[ 'page_id' ] = 'sqli_blind';
 $page[ 'help_button' ]   = 'sqli_blind';
 $page[ 'source_button' ] = 'sqli_blind';
@@ -45,7 +45,7 @@ if( ini_get( 'safe_mode' ) == true ) {
 
 $page[ 'body' ] .= "
 <div class=\"body_padded\">
-	<h1>Vulnerability: SQL Injection (Blind)</h1>
+	<h1>Injection SQL à l'aveugle</h1>
 
 	{$WarningHtml}
 
@@ -83,15 +83,6 @@ $page[ 'body' ] .= "
 		{$html}
 	</div>
 
-	<h2>More Information</h2>
-	<ul>
-		<li>" . dvwaExternalLinkUrlGet( 'http://www.securiteam.com/securityreviews/5DP0N1P76E.html' ) . "</li>
-		<li>" . dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/SQL_injection' ) . "</li>
-		<li>" . dvwaExternalLinkUrlGet( 'http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/' ) . "</li>
-		<li>" . dvwaExternalLinkUrlGet( 'http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet' ) . "</li>
-		<li>" . dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/Blind_SQL_Injection' ) . "</li>
-		<li>" . dvwaExternalLinkUrlGet( 'http://bobby-tables.com/' ) . "</li>
-	</ul>
 </div>\n";
 
 dvwaHtmlEcho( $page );
